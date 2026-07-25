@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Safety & Contamination Prevention</title>
+  <style>
+    /* 5-Color Palette:
+       1. Dark Charcoal (Text/Lines): #2D3748
+       2. Off-White / Background: #F8FAFC
+       3. Calming Soft Blue: #E0F2FE
+       4. Soft Sage Green: #E6F4EA
+       5. Soft Lavender: #F3E8FF
+    */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #F8FAFC;
+      color: #2D3748;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Common Card Styling */
+    .card {
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(45, 55, 72, 0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .icon-box {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: 2px solid #2D3748;
+    }
+
+    .icon-box svg {
+      width: 28px;
+      height: 28px;
+      stroke: #2D3748;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .content {
+      flex-grow: 1;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      color: #2D3748;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    /* Section 1: Soft Blue Accent */
+    .section-1 {
+      background-color: #E0F2FE;
+    }
+
+    /* Section 2: Soft Lavender Accent */
+    .section-2 {
+      background-color: #F3E8FF;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .checklist li::before {
+      content: "🧤";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Section 3: Soft Sage Green Accent */
+    .section-3 {
+      background-color: #E6F4EA;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #2D3748;
+      color: #ffffff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+    }
+
+    /* Responsive adjustment for mobile devices */
+    @media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+        padding: 1.5rem;
+      }
+      body {
+        padding: 1rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- SECTION 1: Hazard Warning -->
+    <section class="card section-1">
+      <div class="icon-box" aria-hidden="true">
+        <!-- Line-art Warning Icon -->
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <div class="content">
+        <h1>Do your part to prevent contamination. ⚠️</h1>
+        <p>Contamination such as humidity, metal particles, skin dust, and others can short the cell and lead to product failure and safety hazards.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Action Steps (Gloves Replacement) -->
+    <section class="card section-2">
+      <div class="icon-box" aria-hidden="true">
+        <!-- Line-art Refresh/Replace Icon -->
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <h2>Replace your nitrile gloves while working in the shop:</h2>
+        <ul class="checklist">
+          <li>In between handling anode and cathode materials</li>
+          <li>When switching work type (e.g., moving from maintenance duties to production)</li>
+          <li>When handling different materials (such as pancakes, separators, or seal tape)</li>
+          <li>Immediately if gloves are compromised or torn</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Bottom Call to Action -->
+    <section class="card section-3">
+      <div class="icon-box" aria-hidden="true">
+        <!-- Line-art Hand / Glove Icon -->
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"></path>
+          <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+          <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+          <path d="M18 8a2 2 0 0 1 2 2v4a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <p>There are plenty of gloves available around the shop.</p>
+        <div class="badge">When in doubt — replace your gloves. 🧼</div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

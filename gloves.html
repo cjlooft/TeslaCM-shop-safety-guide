@@ -37,7 +37,28 @@
 
     /* Common Card Styling */
 
+/* Audio Player Styling */
+.audio-container {
+  background-color: #ffffff;
+  border: 1px solid rgba(45, 55, 72, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
 
+.audio-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2D3748;
+  margin-bottom: 0.75rem;
+}
+
+audio {
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+}
   .card {
   border-radius: 12px;
   padding: 3rem; /* Was 2rem — increasing this gives the boxes much taller/wider internal margins */
@@ -151,6 +172,7 @@
         flex-direction: column;
         padding: 1.5rem;
       }
+      
       body {
         padding: 1rem 0.5rem;
       }
@@ -217,8 +239,30 @@
         <div class="badge">&#x1f9e4; When in doubt — replace your gloves. &#x1f9e4; 
       </div>
     </section>
-
+<!-- AUDIO PLAYER SECTION -->
+<div class="audio-container">
+  <p class="audio-label">🎧 Listen to the Shop Safety Audio Guide:</p>
+  <audio id="safetyAudio" controls preload="auto">
+    <source src="safety-audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
   </div>
+<!-- AUTOMATIC PLAY WITH 1-SECOND DELAY -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('safetyAudio');
+      
+      // 1000 milliseconds = 1 second delay
+      setTimeout(() => {
+        audio.play().catch(error => {
+          // Browser prevented autoplay (requires user interaction)
+          console.log("Autoplay blocked by browser policy. User must click play.");
+        });
+      }, 1000);
+    });
+  </script>
 
 </body>
 </html>
+
